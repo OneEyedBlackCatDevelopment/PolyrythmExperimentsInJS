@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sine Wave Animation with Balls</title>
+	<script src="wave.js"></script>
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+	<h1>Sine Wave Animation with Balls</h1>
+	</br>
+	<div style="height: 35px;">
+	<button id="startButton" style="height: 30px; width: 300px; font-size:24px;">Start Animation</button>
+	</div>
+
+    <canvas id="drawCanvas" width="800px" height="600px"></canvas>
+
+
+
+
+ <script>
+        const canvas = document.getElementById('drawCanvas');
+        const context = canvas.getContext('2d');
+		
+
+        document.getElementById('startButton').addEventListener('click', () => {
+			createBalls();
+			updateBalls();
+			document.getElementById('startButton').remove();
+        });
+    </script>
+	
+	
+	<div id="audioControls"></div>
+   
+</body>
+</html>

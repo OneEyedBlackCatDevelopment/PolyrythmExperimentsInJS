@@ -1,0 +1,40 @@
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: lightgrey;
+}
+
+h1{
+	  background: black;
+	  background: url('./header_background.png') 0 0 repeat-x;
+	  color: white;
+	  padding: 5px 5px;
+}
+
+div {
+  padding: 5px 5px;
+}
+
+table, th, td {
+  border: 1px solid;
+  text-align: center;
+  padding: 10px;
+}
+
+td {
+  vertical-align: bottom;
+}
+
+canvas {
+	background-color: black;
+	border: 1px solid grey;
+	width: 800px;
+	height: 600px;
+}
+.length-control {
+	display: block;
+	margin: 10px 0;
+}
+
+.button {
+	width: 800px;
+}

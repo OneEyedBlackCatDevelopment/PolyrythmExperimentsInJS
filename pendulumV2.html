@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pendulum Animation with Sound (Left/Right Panning)</title>
+	<script src="pendulumV2.js"></script>
+	<link rel="stylesheet" href="./style.css">
+    <style>
+      
+    </style>
+</head>
+<body>
+    <h1>Pendulum Animation with Sound (Left/Right Panning)</h1>
+	</br>
+	<div style="height: 35px;">
+	<button id="startButton" style="height: 30px; width: 300px; font-size:24px;">Start Animation</button>
+	</div>
+	<div>
+    <canvas id="pendulumCanvas" width="800" height="600"></canvas>
+	</div>
+    <div>
+    <label for="timeStepControl">Speed:</label></br>
+    <input id="timeStepControl" type="range" min="0.001" max="0.1" step="0.001" value="0.015"></br>
+	</div>
+    <div id="pendulumControls"></div>
+    
+
+    <script>
+        const canvas = document.getElementById('pendulumCanvas');
+        const context = canvas.getContext('2d');
+
+        const timeStepControl = document.getElementById('timeStepControl');
+        let dt = parseFloat(timeStepControl.value);
+
+        timeStepControl.addEventListener('input', function () {
+            dt = parseFloat(this.value);
+        });
+
+   
+        document.getElementById('startButton').addEventListener('click', () => {
+			createPendulums();
+			updatePendulums();
+			document.getElementById('startButton').remove();
+        });
+    </script>
+	
+	
+	<div><small>Sound samples are from <a href="https://www.haganenote.com/vst/handpan-virtual-instrument.html" target="_blank">HaganeNote Hanpan VST</small></a></div>
+</body>
+</html>
